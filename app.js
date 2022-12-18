@@ -1,5 +1,6 @@
 //2 toglogchiin eelj hadgalah huvsagch
 //Player 1 = 0, Player 2 = 1
+var isGameOver;
 var activePlayer, scores, roundScore;
 shineerEhleh();
 
@@ -39,6 +40,10 @@ function onooHadgalah() {
     document
       .querySelector(".player-" + activePlayer + "-panel")
       .classList.remove("active");
+
+    isGameOver = true;
+    document.querySelector(".btn-roll").style.display = "none";
+    document.querySelector(".btn-hold").style.display = "none";
   } else {
 
      switchPlayer();
@@ -46,6 +51,12 @@ function onooHadgalah() {
 }
 
 function shineerEhleh() {
+
+  isGameOver = false;
+
+  document.querySelector(".btn-roll").style.display = "block";
+    document.querySelector(".btn-hold").style.display = "block";
+
   activePlayer = 0;
 
   //Players point
