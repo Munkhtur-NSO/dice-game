@@ -9,20 +9,24 @@ var scores = [0, 0];
 //Player point now 
 var roundScore = 0;
 
-//Dice point random
+//Dice point random 1 - 6 hurtel 
 var dice = Math.ceil(Math.random() * 6);
 
-window.document.querySelector('#score-0').textContent = dice;
-
-window.document.querySelector('#score-1').textContent = dice;
 
 //Togloom ehleh stage
-document.querySelector('#score-0').textContent = 0;
-document.querySelector('#score-1').textContent = 0;
-
-document.querySelector('#current-0').textContent = 0;
-document.querySelector('#current-1').textContent = 0;
+document.getElementById("score-0").textContent = 0;
+document.getElementById("score-1").textContent = 0;
+document.getElementById('current-0').textContent = 0;
+document.getElementById('current-1').textContent = 0;
 
 document.querySelector('.dice').style.display = "none";
 
-console.log("Шоо :" + dice);
+document.querySelector(".btn-roll").addEventListener("click", shooShid);
+
+function shooShid() {
+    var diceNumber = Math.ceil(Math.random() * 6);
+
+    document.querySelector('.dice').style.display = "block";
+    document.querySelector('.dice').src = 'dice-' + diceNumber + ".png";
+       
+}
