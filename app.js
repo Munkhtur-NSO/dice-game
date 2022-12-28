@@ -32,7 +32,7 @@ function onooHadgalah() {
   document.getElementById("score-" + activePlayer).textContent =
     scores[activePlayer];
 
-  if (scores[activePlayer] >= 10) {
+  if (scores[activePlayer] >= 50) {
     document.getElementById("score-" + activePlayer).textContent = "WINNER!!";
     document
       .querySelector(".player-" + activePlayer + "-panel")
