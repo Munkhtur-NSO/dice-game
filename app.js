@@ -15,8 +15,11 @@ function shooShid() {
   //1-6 доторх санамсаргүй нэг тоо
   var diceNumber = Math.ceil(Math.random() * 6);
 
-  document.querySelector(".dice").style.display = "block";
-  document.querySelector(".dice").src = "dice-" + diceNumber + ".png";
+  document.querySelector(".dice1").style.display = "block";
+  document.querySelector(".dice1").src = "dice-" + diceNumber + ".png";
+
+  document.querySelector(".dice2").style.display = "block";
+  document.querySelector(".dice2").src = "dice-" + diceNumber + ".png";
 
   if (diceNumber != 1) {
     roundScore = roundScore + diceNumber;
@@ -78,7 +81,8 @@ function shineerEhleh() {
  
   document.querySelector(".player-0-panel").classList.add("active");
 
-  document.querySelector(".dice").style.display = "none";
+  document.querySelector(".dice1").style.display = "none";
+  document.querySelector(".dice2").style.display = "none";
 }
 
 function switchPlayer() {
@@ -93,5 +97,6 @@ function switchPlayer() {
   document.querySelector(".player-1-panel").classList.toggle("active");
 
   // Шоог алга болгоно
-  document.querySelector(".dice").style.display = "none";
+  document.querySelector(".dice1").style.display = "none";
+  document.querySelector(".dice2").style.display = "none";
 }
